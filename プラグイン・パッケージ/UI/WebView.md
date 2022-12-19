@@ -92,8 +92,8 @@
 
       // Android はデフォルトの WebView 設定では日本語入力ができません。
       // そこで initState の初期化処理で WebView に SurfaceAndroidWebView を設定します。
-<!--     キーボード入力が必要な場合は、Hybrid Composition ベースの PlatformView を使うことが推奨されています。
-         上記のコードを追加することで Hybrid Composition ベースの PlatformView を使うので、日本語入力等出来るようになるわけです。 -->
+      // キーボード入力が必要な場合は、Hybrid Composition ベースの PlatformView を使うことが推奨されています。
+      // 上記のコードを追加することで Hybrid Composition ベースの PlatformView を使うので、日本語入力等出来るようになるわけです。 -->
       @override
       void initState() {
         super.initState();
@@ -104,8 +104,8 @@
 
       // ローディング状態や Web サイトタイトルを画面に反映させる
       // setState で変更された状態が画面に反映される処理をいれます
-<!--     ここでは AppBar に先程定義した _title プロパティを設定しています。
-         また、先程定義した _isLoading フラグが true の場合 AppBar の下部に LinearProgressIndicator を表示する実装をしています。 -->
+      // ここでは AppBar に先程定義した _title プロパティを設定しています。
+      // また、先程定義した _isLoading フラグが true の場合 AppBar の下部に LinearProgressIndicator を表示する実装をしています。 -->
       @override
       Widget build(BuildContext context) {
         return Scaffold(
@@ -127,17 +127,16 @@
         );
       }
       
- <!-- initialUrl に表示したいサイト URL を設定します。
-      プロダクトでは動的に URL を設定する思いますが、今回はサンプルの為ハードコーディングしています。
-      JavaScript はデフォルトで無効になっているので、JavascriptMode.unrestricted で 有効にします。
-      onWebViewCreated で WebViewController を WebView に登録します。
-      onPageStarted で Web サイトの読み込みが開始した場合の処理を実装します。
-      今回は読み込み中にローディングインジケーターを表示するので、 _isLoading = true としています。
-      onPageFinished で Web サイトの読み込み終了した場合の処理を実装します。
-      読み込み中のローディングインジケーターを非表示にする為、 _isLoading = false としています。
-      最後に controller.getTitle() で web サイトタイトルを取得、 _title プロパティに代入して AppBar にタイトルを表示します。 -->
-
-
+      /// initialUrl に表示したいサイト URL を設定します。
+      /// プロダクトでは動的に URL を設定する思いますが、今回はサンプルの為ハードコーディングしています。
+      /// JavaScript はデフォルトで無効になっているので、JavascriptMode.unrestricted で 有効にします。
+      /// onWebViewCreated で WebViewController を WebView に登録します。
+      /// onPageStarted で Web サイトの読み込みが開始した場合の処理を実装します。
+      /// 今回は読み込み中にローディングインジケーターを表示するので、 _isLoading = true としています。
+      /// onPageFinished で Web サイトの読み込み終了した場合の処理を実装します。
+      /// 読み込み中のローディングインジケーターを非表示にする為、 _isLoading = false としています。
+      /// 最後に controller.getTitle() で web サイトタイトルを取得、 _title プロパティに代入して AppBar にタイトルを表示します。
+      
       Widget _buildWebView() {
         return WebView(
           initialUrl: 'https://flutter.dev',
@@ -171,11 +170,3 @@
       }
     }
     ```
-
-### コード
-
-- `ディレクトリ`
-
-```dart
-
-```
