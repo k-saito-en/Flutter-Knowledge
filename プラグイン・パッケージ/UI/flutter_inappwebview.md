@@ -92,11 +92,3 @@
   - InAppBrowser　（ブラウザ表示機能）
   - ChromeSafariBrowser　（ブラウザ表示機能）
 
-### コード
-
-- `ディレクトリ`
-
-```dart
-
-```
-
