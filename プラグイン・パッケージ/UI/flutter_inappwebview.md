@@ -53,8 +53,10 @@
       InAppWebView createWidget() {
 
         return InAppWebView(
+        　// 引数「initialUrl」または、引数「initialFaile」で表示させるwebサイトのURLを指定します。
           initialUrl: appUrl,
           initialHeaders: {},
+          // 引数「initialOptions」では、WebViewの詳細な設定を行います。
           initialOptions: InAppWebViewWidgetOptions(
             inAppWebViewOptions: InAppWebViewOptions(
               // 共通オプション
