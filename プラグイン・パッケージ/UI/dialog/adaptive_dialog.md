@@ -62,4 +62,31 @@
     return result ?? OkCancelResult.cancel;
   }
   ```
+  - 表示例
+    ```dart
+    class AlertPage extends StatelessWidget {
+      const AlertPage({Key? key}) : super(key: key);
+
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(pascalCaseFromRouteName(GoRouter.of(context).location)),
+          ),
+          body: ListView(
+            children: <Widget>[
+              ListTile(
+                title: const Text('OK Dialog'),
+                onTap: () async {
+                  final result = await showOkAlertDialog(
+                    context: context,
+                    title: 'Title',
+                    message: 'This is message.',
+                  );
+                  logger.info(result);
+                },
+              ),
+              ...
+    ```
+  
 
