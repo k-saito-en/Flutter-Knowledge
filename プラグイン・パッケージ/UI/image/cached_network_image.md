@@ -12,6 +12,25 @@
 
 ### 使い方
 
+- URLを渡してあげるだけ！非常に簡単
+
+```dart
+
+CachedNetworkImage(
+  imageUrl: 'https://avatars.githubusercontent.com/u/13707135?v=4',
+),
+
+```
+- 読み込み中に進捗表示する（オプション例）
+```dart
+CachedNetworkImage(
+  imageUrl: 'https://avatars.githubusercontent.com/u/13707135?v=4',
++  progressIndicatorBuilder: (context, url, downloadProgress) =>
++      CircularProgressIndicator(value: downloadProgress.progress),
+),
+```
+  
+
 ### コード
 
 - `ディレクトリ`
